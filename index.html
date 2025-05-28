@@ -2,63 +2,68 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>뉴스 기사 링크 모음</title>
+  <title>뉴스 스크랩</title>
   <style>
     body {
-      font-family: 'Pretendard', sans-serif;
       margin: 0;
       padding: 2rem;
-      background-color: #f9f9f9;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #f2f2f7;
+      color: #1c1c1e;
     }
 
     h2 {
-      margin-bottom: 1rem;
-      color: #333;
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
     }
 
     .news-container {
       display: flex;
       overflow-x: auto;
       gap: 1rem;
-      padding-bottom: 1rem;
       scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
     }
 
     .news-item {
       flex: 0 0 auto;
-      width: 300px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      padding: 1rem;
+      width: 280px;
+      background-color: #fff;
+      border-radius: 16px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 1.2rem;
       scroll-snap-align: start;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .news-item:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     }
 
     .news-item a {
       text-decoration: none;
-      color: #1a73e8;
+      color: #007aff;
       font-weight: 600;
+      font-size: 1rem;
     }
 
     .news-item p {
-      color: #555;
       margin-top: 0.5rem;
       font-size: 0.9rem;
+      color: #3c3c43;
+      opacity: 0.7;
     }
 
-    /* 스크롤바 꾸미기 (선택 사항) */
     .news-container::-webkit-scrollbar {
-      height: 8px;
+      height: 6px;
     }
 
     .news-container::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
     }
 
     .news-container::-webkit-scrollbar-track {
@@ -72,18 +77,45 @@
 
   <div class="news-container">
     <div class="news-item">
-      <a href="https://news.example.com/article1" target="_blank">첫 번째 뉴스 제목</a>
-      <p>요약이나 설명을 간단히 넣을 수 있어요.</p>
+      <a href="https://news.example.com/article1" target="_blank">[단독] 반도체 수출 5개월 연속 상승</a>
+      <p>한국 경제의 회복 신호로 해석돼.</p>
     </div>
     <div class="news-item">
-      <a href="https://news.example.com/article2" target="_blank">두 번째 뉴스 제목</a>
-      <p>설명을 짧게 넣으면 보기 좋아요.</p>
+      <a href="https://news.example.com/article2" target="_blank">세계은행, 올해 성장률 2.8% 전망</a>
+      <p>전망치는 이전보다 소폭 상향.</p>
     </div>
     <div class="news-item">
-      <a href="https://news.example.com/article3" target="_blank">세 번째 뉴스 제목</a>
-      <p>필요하면 날짜나 출처도 표기 가능.</p>
+      <a href="https://news.example.com/article3" target="_blank">서울 집값 다시 반등...금리 영향?</a>
+      <p>전문가들 "수요 심리 회복 시작됐다"</p>
     </div>
-    <!-- 원하는 만큼 복사해서 추가하면 돼요 -->
+    <div class="news-item">
+      <a href="https://news.example.com/article4" target="_blank">AI 규제 법안, 美 의회 통과 임박</a>
+      <p>테크기업들 긴장…영향력 클 듯</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article5" target="_blank">日 엔화 약세, 관광객 폭증</a>
+      <p>한국인 여행 수요도 증가 중</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article6" target="_blank">2030세대, 첫 내집 마련 비율 상승</a>
+      <p>청년층 내집 마련 지원책 확대 영향</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article7" target="_blank">미국 증시, S&P500 사상 최고치</a>
+      <p>투자심리 강세 지속</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article8" target="_blank">전기차 보조금, 2차 개편 논의</a>
+      <p>고가 차량 제외 여부 관심</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article9" target="_blank">기후 변화, 농산물 가격 불안정화</a>
+      <p>식량 안보 이슈 부각</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article10" target="_blank">스타트업 투자, 회복 조짐 보여</a>
+      <p>시리즈 A 투자 다시 활발</p>
+    </div>
   </div>
 
 </body>
