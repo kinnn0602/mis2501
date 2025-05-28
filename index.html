@@ -7,67 +7,55 @@
     body {
       margin: 0;
       padding: 2rem;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
       background-color: #f2f2f7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #1c1c1e;
     }
 
     h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 2rem;
       font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
-    .news-container {
+    .news-list {
       display: flex;
-      overflow-x: auto;
-      gap: 1rem;
-      scroll-snap-type: x mandatory;
-      padding-bottom: 1rem;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    .news-item {
-      flex: 0 0 auto;
-      width: 280px;
-      background-color: #fff;
+    .news-card {
+      background-color: #ffffff;
       border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+      padding: 1.5rem;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
       border: 1px solid #e0e0e0;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-      padding: 1.2rem;
-      scroll-snap-align: start;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .news-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    .news-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     }
 
-    .news-item a {
+    .news-card a {
       text-decoration: none;
       color: #007aff;
+      font-size: 1.1rem;
       font-weight: 600;
-      font-size: 1rem;
+      display: block;
+      margin-bottom: 0.4rem;
     }
 
-    .news-item p {
-      margin-top: 0.5rem;
-      font-size: 0.9rem;
+    .news-card p {
+      margin: 0;
       color: #3c3c43;
       opacity: 0.7;
-    }
-
-    .news-container::-webkit-scrollbar {
-      height: 6px;
-    }
-
-    .news-container::-webkit-scrollbar-thumb {
-      background-color: rgba(0, 0, 0, 0.15);
-      border-radius: 3px;
-    }
-
-    .news-container::-webkit-scrollbar-track {
-      background-color: transparent;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -75,44 +63,44 @@
 
   <h2>오늘의 뉴스 스크랩</h2>
 
-  <div class="news-container">
-    <div class="news-item">
+  <div class="news-list">
+    <div class="news-card">
       <a href="https://news.example.com/article1" target="_blank">[단독] 반도체 수출 5개월 연속 상승</a>
       <p>한국 경제의 회복 신호로 해석돼.</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article2" target="_blank">세계은행, 올해 성장률 2.8% 전망</a>
       <p>전망치는 이전보다 소폭 상향.</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article3" target="_blank">서울 집값 다시 반등...금리 영향?</a>
       <p>전문가들 "수요 심리 회복 시작됐다"</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article4" target="_blank">AI 규제 법안, 美 의회 통과 임박</a>
       <p>테크기업들 긴장…영향력 클 듯</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article5" target="_blank">日 엔화 약세, 관광객 폭증</a>
       <p>한국인 여행 수요도 증가 중</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article6" target="_blank">2030세대, 첫 내집 마련 비율 상승</a>
       <p>청년층 내집 마련 지원책 확대 영향</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article7" target="_blank">미국 증시, S&P500 사상 최고치</a>
       <p>투자심리 강세 지속</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article8" target="_blank">전기차 보조금, 2차 개편 논의</a>
       <p>고가 차량 제외 여부 관심</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article9" target="_blank">기후 변화, 농산물 가격 불안정화</a>
       <p>식량 안보 이슈 부각</p>
     </div>
-    <div class="news-item">
+    <div class="news-card">
       <a href="https://news.example.com/article10" target="_blank">스타트업 투자, 회복 조짐 보여</a>
       <p>시리즈 A 투자 다시 활발</p>
     </div>
