@@ -1,9 +1,90 @@
-<html>
-  <head>
-    <title>김윤서의 웹페이지</title>
-  </head>
-  <body>
-    <h1>IT 기사 모음</h1>
-    <a href="http://hannam.ac.kr" target="_blank">첫번째 IT 기사</a>
-  </body>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>뉴스 기사 링크 모음</title>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f9f9f9;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .news-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .news-item {
+      flex: 0 0 auto;
+      width: 300px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      padding: 1rem;
+      scroll-snap-align: start;
+      transition: transform 0.3s;
+    }
+
+    .news-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .news-item a {
+      text-decoration: none;
+      color: #1a73e8;
+      font-weight: 600;
+    }
+
+    .news-item p {
+      color: #555;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    /* 스크롤바 꾸미기 (선택 사항) */
+    .news-container::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    .news-container::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    .news-container::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>오늘의 뉴스 스크랩</h2>
+
+  <div class="news-container">
+    <div class="news-item">
+      <a href="https://news.example.com/article1" target="_blank">첫 번째 뉴스 제목</a>
+      <p>요약이나 설명을 간단히 넣을 수 있어요.</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article2" target="_blank">두 번째 뉴스 제목</a>
+      <p>설명을 짧게 넣으면 보기 좋아요.</p>
+    </div>
+    <div class="news-item">
+      <a href="https://news.example.com/article3" target="_blank">세 번째 뉴스 제목</a>
+      <p>필요하면 날짜나 출처도 표기 가능.</p>
+    </div>
+    <!-- 원하는 만큼 복사해서 추가하면 돼요 -->
+  </div>
+
+</body>
 </html>
